@@ -61,7 +61,8 @@ public class PayTM extends CordovaPlugin {
                               final String txn_amt,
                               final CallbackContext callbackContext){
 
-        paytm_service = PaytmPGService.getProductionService();
+        paytm_service = PaytmPGService.getStagingService();
+        Log.e("Error Paytm change", "staging server set");
         Map<String, String> paramMap = new HashMap<String, String>();
         paramMap.put("REQUEST_TYPE", "DEFAULT");
         paramMap.put("ORDER_ID", order_id);
