@@ -38,7 +38,7 @@
     [PGOrder orderForOrderID:orderId customerID:customerId amount:amount customerMail:email customerMobile:phone];
     
     txnController = [[PGTransactionViewController alloc] initTransactionForOrder:order];
-    txnController.serverType = eServerTypeProduction;
+    txnController.serverType = eServerTypeStaging;
     txnController.merchant = merchant;
     txnController.delegate = self;
     txnController.loggingEnabled = true;
